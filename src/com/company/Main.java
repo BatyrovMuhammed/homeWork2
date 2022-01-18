@@ -10,9 +10,49 @@ public class Main {
     private static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) throws InputException {
-//        while (true) {
-//            start();
-//        }
+        while (true) {
+            commads();
+            int num = in.nextInt();
+            String sim = in.nextLine();
+            switch (num){
+                case 1 ->{
+                    s.printAllMovies(movies);
+                }
+                case 2 ->{
+                    String findMovie = in.nextLine();
+                    s.findMovie(movies,findMovie);
+                }
+                case 3 ->{
+                    s.sortByYear(movies);
+                }
+                case 4 ->{
+                    s.sortByName(movies);
+                }
+                case 5 ->{
+                    s.sortByDirector(movies);
+                }
+                case 6 ->{
+                    String findByActor=in.nextLine();
+                    f.findMoviesByActor(movies,findByActor);
+                }
+                case  7 ->{
+                    String findMoviesByDirector = in.nextLine();
+                    f.findMoviesByDirector(movies,findMoviesByDirector);
+                }
+                case 8 ->{
+                    int findMoviesYear = in.nextInt();
+                    f.findMoviesByYear(movies,findMoviesYear);
+                }
+                case 9 ->{
+                    String role = in.nextLine();
+                    f.findMoviesAndRoleByActor(movies,role);
+                }
+                case 10->{
+                    f.showActorRoles(movies);
+                }
+
+            }
+    }
     }
 
 
